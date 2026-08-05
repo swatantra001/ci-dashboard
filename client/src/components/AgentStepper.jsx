@@ -66,7 +66,7 @@ export default function AgentStepper({ running, competitor, onClose, runId }) {
     if (!running || !runId) return;
 
     // SSE se real logs subscribe karo
-    const url = `http://localhost:5000/api/logs/${runId}`;
+    const url = `/api/logs/${runId}`;
     const es = new EventSource(url);
 
     es.onmessage = (event) => {

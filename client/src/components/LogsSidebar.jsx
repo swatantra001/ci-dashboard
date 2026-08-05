@@ -33,7 +33,7 @@ export default function LogsSidebar({ open, onClose, runId }) {
     setStatus("running");
     console.log(4);
     // Connect securely directly through Node Express Pipeline Proxy (Port 5000)
-    const url = `http://localhost:5000/api/logs/${runId}`;
+    const url = `/api/logs/${runId}`;
     console.log("[LogsSidebar] Connecting EventSource to:", url);
     console.log(5);
     const es = new EventSource(url);

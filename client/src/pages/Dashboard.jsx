@@ -58,7 +58,7 @@ export default function Dashboard() {
       console.log(`[Dashboard] Sending run request for: ${name}`);
 
       const res = await fetch(
-        `http://localhost:5000/api/run-agent?competitor_name=${encodeURIComponent(name)}&userId=${userId}`,
+        `/api/run-agent?competitor_name=${encodeURIComponent(name)}&userId=${userId}`,
         {
           method: "POST",
           credentials: "include",
@@ -93,7 +93,7 @@ export default function Dashboard() {
       setStepperOpen(true);
 
       const res = await fetch(
-        `http://localhost:5000/api/run-agent?userId=${userId}`,
+        `/api/run-agent?userId=${userId}`,
         { method: "POST", credentials: "include" },
       );
 
